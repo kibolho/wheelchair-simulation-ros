@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <robot name="turtlebot3_wheelchair" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find turtlebot3_description)/urdf/common_properties.xacro"/>
   <xacro:include filename="$(find turtlebot3_description)/urdf/turtlebot3_wheelchair.gazebo.xacro"/>
@@ -38,7 +38,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/base_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -52,7 +52,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/base_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -78,7 +78,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/wheel_left_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/wheel_left_link.STL" />
       </geometry>
       <material
         name="">
@@ -92,7 +92,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/wheel_left_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/wheel_left_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -131,7 +131,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/wheel_right_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/wheel_right_link.STL" />
       </geometry>
       <material
         name="">
@@ -145,7 +145,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/wheel_right_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/wheel_right_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -184,7 +184,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/imu_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/imu_link.STL" />
       </geometry>
       <material
         name="">
@@ -198,7 +198,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/imu_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/imu_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -242,7 +242,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_small_left_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_small_left_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -256,7 +256,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_small_left_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_small_left_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -300,7 +300,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/small_left_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/small_left_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -314,7 +314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/small_left_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/small_left_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -353,7 +353,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_small_right_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_small_right_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -367,7 +367,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_small_right_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_small_right_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -411,7 +411,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/small_right_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/small_right_wheel_link.STL" />
       </geometry>
       <material
         name="">
@@ -425,7 +425,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/small_right_wheel_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/small_right_wheel_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -464,7 +464,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/tube_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/tube_link.STL" />
       </geometry>
       <material
         name="">
@@ -478,7 +478,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/tube_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/tube_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -517,7 +517,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/suport_kinect_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/suport_kinect_link.STL" />
       </geometry>
       <material
         name="">
@@ -531,7 +531,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/suport_kinect_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/suport_kinect_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -570,7 +570,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/base_scan_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/base_scan_link.STL" />
       </geometry>
       <material
         name="">
@@ -584,7 +584,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/base_scan_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/base_scan_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -623,7 +623,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_right_feet_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_right_feet_link.STL" />
       </geometry>
       <material
         name="">
@@ -637,7 +637,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_right_feet_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_right_feet_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -676,7 +676,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_left_feet_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_left_feet_link.STL" />
       </geometry>
       <material
         name="">
@@ -690,7 +690,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wheelchair_description3/meshes/support_left_feet_link.STL" />
+          filename="package://turtlebot3_description/meshes/wheelchair/support_left_feet_link.STL" />
       </geometry>
     </collision>
   </link>
