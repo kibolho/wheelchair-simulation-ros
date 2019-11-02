@@ -7,6 +7,7 @@
   <xacro:property name="r200_cam_rgb_py" value="0.018"/>
   <xacro:property name="r200_cam_rgb_pz" value="0.013"/>
   <xacro:property name="r200_cam_depth_offset" value="0.01"/>
+  <xacro:property name="angle_x_kinect_support" value="-2.0"/> <!-- reto = -1.7217 -->
 
   <link name="base_footprint"/>
 
@@ -539,7 +540,7 @@
     type="fixed">
     <origin
       xyz="0.1227 0.56 0"
-      rpy="-1.7217 0 0" />
+      rpy="${angle_x_kinect_support} 0 0" />
     <parent
       link="tube_link" />
     <child
