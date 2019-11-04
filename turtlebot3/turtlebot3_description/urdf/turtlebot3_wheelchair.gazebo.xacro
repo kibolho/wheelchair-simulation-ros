@@ -7,7 +7,7 @@
   <gazebo reference="base_link">
     <material>Gazebo/DarkGrey</material>
   </gazebo>
-
+<!-- 
   <gazebo reference="wheel_left_link">
     <mu1>0.1</mu1>
     <mu2>0.1</mu2>
@@ -48,7 +48,7 @@
     <minDepth>0.001</minDepth>
     <maxVel>1.0</maxVel>
     <material>Gazebo/FlatBlack</material>
-  </gazebo>
+  </gazebo> -->
 
   <gazebo reference="support_small_left_wheel_link">
     <mu1>0.1</mu1>
@@ -130,7 +130,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="base_scan">
+  <gazebo reference="base_scan_link">
     <material>Gazebo/FlatBlack</material>
     <sensor type="ray" name="lds_lfcd_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -163,7 +163,7 @@
     </sensor>
   </gazebo>
 
-  <gazebo reference="camera_rgb_frame">
+  <gazebo reference="base_scan_link">
     <sensor type="depth" name="realsense_R200">
       <always_on>true</always_on>
       <visualize>$(arg camera_visual)</visualize>
