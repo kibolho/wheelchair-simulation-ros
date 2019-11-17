@@ -49,7 +49,7 @@
     <maxVel>1.0</maxVel>
     <material>Gazebo/FlatBlack</material>
   </gazebo> -->
-
+<!-- 
   <gazebo reference="support_small_left_wheel_link">
     <mu1>0.1</mu1>
     <mu2>0.1</mu2>
@@ -68,7 +68,7 @@
     <minDepth>0.001</minDepth>
     <maxVel>1.0</maxVel>
     <material>Gazebo/FlatBlack</material>
-  </gazebo>
+  </gazebo> -->
 
   <gazebo reference="imu_link">
     <sensor type="imu" name="imu">
@@ -78,28 +78,41 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
+  <!--Publish joint state from Gazebo-->
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <jointName>
+            support_small_left_wheel_joint, small_left_wheel_joint, support_small_right_wheel_joint, small_right_wheel_joint
+        </jointName>
+        <updateRate>100</updateRate>
+        <alwaysOn>true</alwaysOn>
+    </plugin>
+  </gazebo>
+
+
   <gazebo>
       <plugin name="turtlebot3_wheelchair_controller" filename="libgazebo_ros_diff_drive.so">
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-      <odometrySource>world</odometrySource>
-      <publishOdomTF>true</publishOdomTF>
-      <robotBaseFrame>base_footprint</robotBaseFrame>	<!-- base_frame link -->
-      <publishWheelTF>false</publishWheelTF>
-      <publishTf>true</publishTf>
-      <publishWheelJointState>true</publishWheelJointState>
-      <legacyMode>false</legacyMode>
-      <updateRate>30</updateRate>
-      <leftJoint>wheel_left_joint</leftJoint>		<!-- left wheel joint name -->
-      <rightJoint>wheel_right_joint</rightJoint>	<!-- right wheel joint name -->
-      <wheelSeparation>0.8308</wheelSeparation>		<!-- distance between wheel -->
-      <wheelDiameter>0.5</wheelDiameter>		<!-- wheel diameter -->
-      <wheelAcceleration>1</wheelAcceleration>
-      <wheelTorque>10</wheelTorque>
-      <rosDebugLevel>na</rosDebugLevel>
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometrySource>world</odometrySource>
+        <publishOdomTF>true</publishOdomTF>
+        <robotBaseFrame>base_footprint</robotBaseFrame>	<!-- base_frame link -->
+        <publishWheelTF>false</publishWheelTF>
+        <publishTf>true</publishTf>
+        <publishWheelJointState>true</publishWheelJointState>
+        <legacyMode>false</legacyMode>
+        <updateRate>30</updateRate>
+        <leftJoint>wheel_left_joint</leftJoint>		<!-- left wheel joint name -->
+        <rightJoint>wheel_right_joint</rightJoint>	<!-- right wheel joint name -->
+        <wheelSeparation>0.8308</wheelSeparation>		<!-- distance between wheel -->
+        <wheelDiameter>0.5</wheelDiameter>		<!-- wheel diameter -->
+        <wheelAcceleration>1</wheelAcceleration>
+        <wheelTorque>10</wheelTorque>
+        <rosDebugLevel>na</rosDebugLevel>
       </plugin>
   </gazebo> 
+
 
   <gazebo>
     <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
@@ -130,7 +143,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="base_scan_link">
+  <gazebo reference="camera_depth_link">
     <material>Gazebo/FlatBlack</material>
     <sensor type="ray" name="lds_lfcd_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -158,12 +171,12 @@
       </ray>
       <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
         <topicName>scan</topicName>
-        <frameName>base_scan_link</frameName>
+        <frameName>camera_depth_link</frameName>
       </plugin>
     </sensor>
   </gazebo>
 
-  <gazebo reference="base_scan_link">
+  <gazebo reference="camera_depth_link">
     <sensor type="depth" name="realsense_R200">
       <always_on>true</always_on>
       <visualize>$(arg camera_visual)</visualize>
@@ -185,7 +198,7 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>30.0</updateRate>
         <cameraName>camera</cameraName>
-        <frameName>base_scan_link</frameName>
+        <frameName>camera_depth_link</frameName>
         <imageTopicName>rgb/image_raw</imageTopicName>
         <depthImageTopicName>depth/image_raw</depthImageTopicName>
         <pointCloudTopicName>depth/points</pointCloudTopicName>
