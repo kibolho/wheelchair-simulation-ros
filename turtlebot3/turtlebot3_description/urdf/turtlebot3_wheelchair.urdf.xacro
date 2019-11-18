@@ -716,7 +716,7 @@
   <joint name="camera_depth_joint" type="fixed">
     <origin
       xyz="-0.0172679996722472 0.0332354726616141 0.0356363815538528"
-      rpy="0 0 0" />
+      rpy="0 0 ${M_PI/2}" />
     <parent
       link="camera_link" />
     <child
