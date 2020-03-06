@@ -11,6 +11,7 @@
   <!-- reto = -1.7217 ou -98,64614358 graus -->
   <!-- Inclinação de 135-98,64614358 = 36,35385642 graus -->
   <xacro:property name="angle_x_kinect_support" value="${-M_PI*135/180}"/> 
+  <!-- Inclinação do laser -15 graus  graus -->
   <xacro:property name="angle_laser" value="${-M_PI*15/180}"/> 
 
 
