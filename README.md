@@ -20,3 +20,6 @@ roslaunch turtlebot3_gazebo turtlebot3_house.launch
 
 Command to run slam:
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+
+[![Watch the video](https://i.imgur.com/tlLSt38.png)](https://www.youtube.com/watch?v=MN8X7QZI1YM&t=1s&ab_channel=Ab%C3%ADlioMarcos)
+
