@@ -1,6 +1,6 @@
 # Wheelchair
 
-Cadeira de Rodas Autônoma
+Simulação de Cadeira de Rodas Autônoma - TCC Curso de Engenharia Elétrica - IFES 2020
 
 Select the model:
 export TURTLEBOT3_MODEL=wheelchair //[burger, waffle, waffle_pi, wheelchair]
